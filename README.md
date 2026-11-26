@@ -6,8 +6,8 @@ A Sunday letter on technology, data, and business. Python will collect the news,
 
 ## Layout
 
-- `src/weekly_signal/` — the pipeline. `ingestion/load_source_addresses.py` reads the publisher list. `ingestion/download_source_content.py` downloads one feed.
-- `scripts/print_source_info.py` — the command that prints that list. Scripts stay thin. The work they call lives in `src/`.
+- `src/weekly_signal/` — the pipeline. `ingestion/load_source_addresses.py` reads the publisher list. `ingestion/download_source_content.py` downloads one feed. `ingestion/kept_articles.py` keeps stories from the last 8 days and drops repeated ids.
+- `scripts/print_source_info.py` — prints the publisher list. `scripts/print_recent_articles.py` downloads the feeds and prints how many stories were kept. Scripts stay thin. The work they call lives in `src/`.
 - `config/sources.yaml` — the publisher list. Add or remove a source here.
 - `web/` — the landing page, deployed later on Vercel.
 - Supabase will hold the hosted list. Render will run the weekly job. Resend will deliver the letter. None of those are connected yet.

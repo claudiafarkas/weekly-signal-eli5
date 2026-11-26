@@ -13,7 +13,8 @@ from weekly_signal.models import Source
 
 
 def load_source_addresses(path: Path) -> list[Source]:
-    """Return every publisher in the file, including disabled ones.
+    """Return every publisher in the file, including disabled ones. 
+    Why return every published one ? Because the script may want to print the info for each one.
 
     Raises ValueError when the file is not a publisher list, an entry is
     missing a required field, or two entries share an id.

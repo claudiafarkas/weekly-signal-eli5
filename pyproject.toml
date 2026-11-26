@@ -1,0 +1,10 @@
+[project]
+name = "weekly-signal"
+version = "0.1.0"
+description = "A weekly letter that keeps the news worth understanding."
+requires-python = ">=3.12"
+readme = "README.md"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

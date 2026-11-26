@@ -1,0 +1,11 @@
+sources:
+  - id: example
+    publisher: Example Times
+    kind: rss
+    url: https://example.com/rss
+    enabled: true
+  - id: paused
+    publisher: Paused Paper
+    kind: rss
+    url: https://example.com/paused
+    enabled: false

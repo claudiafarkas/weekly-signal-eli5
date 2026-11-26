@@ -1,0 +1,4 @@
+sources:
+  - id: broken
+    publisher: Broken Feed
+    kind: rss

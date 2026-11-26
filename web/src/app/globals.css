@@ -1,0 +1,262 @@
+:root {
+  --paper: #f6f6f4;
+  --ink: #1b2430;
+  --ink-soft: #3e4c5c;
+  --muted: #5c6b7a;
+  --rule: #e3e2de;
+  --accent: #2c4a61;
+  --danger: #8a3e32;
+  --focus: #2c4a61;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--paper);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans), "Source Sans 3", sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+::selection {
+  background: #d5e0ea;
+  color: var(--ink);
+}
+
+.page {
+  width: min(40rem, calc(100% - 2.5rem));
+  margin: 0 auto;
+  padding: 2.75rem 0 4.5rem;
+}
+
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--ink);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.wordmark {
+  margin: 1.6rem 0 0;
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(3.1rem, 9vw, 4.75rem);
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+}
+
+.tagline {
+  margin: 0.85rem 0 0;
+  font-family: var(--font-serif), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.45rem;
+  line-height: 1.3;
+  color: var(--ink-soft);
+}
+
+.deck {
+  margin: 1.35rem 0 0;
+  max-width: 36rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.subscribe {
+  margin-top: 2rem;
+}
+
+.subscribe label {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.fields {
+  display: flex;
+  gap: 0.6rem;
+  align-items: stretch;
+}
+
+.fields input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid var(--ink);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--ink);
+}
+
+.fields input::placeholder {
+  color: #8a8680;
+}
+
+.fields input:focus-visible,
+.fields button:focus-visible,
+.text-button:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.fields button,
+.text-button {
+  border: 1px solid var(--ink);
+  border-radius: 2px;
+  background: var(--ink);
+  color: var(--paper);
+  cursor: pointer;
+}
+
+.fields button {
+  padding: 0.8rem 1rem;
+  white-space: nowrap;
+}
+
+.fields button:hover,
+.text-button:hover {
+  background: #2a3544;
+}
+
+.fields button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.fine-print,
+.form-error,
+.status-copy {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.form-error {
+  color: var(--danger);
+}
+
+.rule {
+  margin: 2.75rem 0;
+  border: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.section-kicker {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.anatomy {
+  margin: 1.25rem 0 0;
+}
+
+.anatomy div + div {
+  margin-top: 1.15rem;
+}
+
+.anatomy dt {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.anatomy dd {
+  margin: 0.2rem 0 0;
+  color: var(--ink-soft);
+}
+
+.sections {
+  margin: 1.1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sections li {
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.15rem;
+}
+
+.sections li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.sections span {
+  display: block;
+  margin-top: 0.1rem;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.status {
+  margin-top: 1.75rem;
+}
+
+.status h2 {
+  margin: 0;
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 500;
+  font-size: 2rem;
+  letter-spacing: -0.03em;
+}
+
+.text-button {
+  margin-top: 1.1rem;
+  padding: 0.55rem 0.8rem;
+  background: transparent;
+  color: var(--ink);
+}
+
+@media (max-width: 640px) {
+  .page {
+    width: min(40rem, calc(100% - 2rem));
+    padding-top: 1.75rem;
+  }
+
+  .masthead,
+  .footer {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .fields {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,48 @@
+# Publishers are added and removed here. The pipeline should not hard-code them.
+# Ingestion uses the feed itself: title, URL, date, description, and body text
+# only when the feed includes it. Article pages are not fetched.
+# Financial Times, Bloomberg, and The Economist stay off this list until a
+# permitted feed URL is known.
+
+sources:
+  - id: the-verge
+    publisher: The Verge
+    kind: rss
+    url: https://www.theverge.com/rss/index.xml
+    enabled: true
+
+  - id: techcrunch
+    publisher: TechCrunch
+    kind: rss
+    url: https://techcrunch.com/feed/
+    enabled: true
+
+  - id: ars-technica
+    publisher: Ars Technica
+    kind: rss
+    url: https://feeds.arstechnica.com/arstechnica/index
+    enabled: true
+
+  - id: wired
+    publisher: Wired
+    kind: rss
+    url: https://www.wired.com/feed/rss
+    enabled: true
+
+  - id: nyt-technology
+    publisher: The New York Times
+    kind: rss
+    url: https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml
+    enabled: true
+
+  - id: infoq
+    publisher: InfoQ
+    kind: rss
+    url: https://feed.infoq.com/
+    enabled: true
+
+  - id: hacker-news
+    publisher: Hacker News
+    kind: rss
+    url: https://hnrss.org/frontpage
+    enabled: true
